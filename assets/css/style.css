@@ -256,6 +256,7 @@
 }
 .instagram {
   height: auto;
+  position: absolute;
   left: 2px;
   top: 2px;
   overflow: visible;
