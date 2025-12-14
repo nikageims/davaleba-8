@@ -3233,3 +3233,150 @@
   top: 18.17%;
   overflow: visible;
 }
+
+/* Mobile Styles (< 768px) */
+@media (max-width: 767px) {
+  .header-1 {
+    padding: 28px 20px 28px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header-logo {
+    flex: none;
+    width: 100%;
+  }
+  .seader-searchbox-inside {
+    width: 100%;
+  }
+  .header-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header-gray {
+    padding: 8px 20px 8px 20px;
+  }
+  .frm-flash-sale {
+    padding: 0px 20px 0px 20px;
+  }
+  .fem-trending {
+    padding: 0px 20px 0px 20px;
+  }
+  .frm-top-100 {
+    padding: 0px 20px 0px 20px;
+  }
+  .frm-card-34 {
+    padding: 0px 20px 0px 20px;
+  }
+  .card-5 {
+    padding: 0px 20px 0px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer2 {
+    padding: 132px 20px 60px 20px;
+  }
+  .frm-top-left {
+    width: 100%;
+  }
+  .button-top {
+    flex-direction: column;
+    height: auto;
+  }
+  .button-top-right {
+    padding: 20px;
+  }
+  .kimonos-caftans-pareos {
+    font-size: 24px;
+  }
+  .poolside-glam-included-from-4-99 {
+    font-size: 20px;
+    width: auto;
+    left: 20px;
+  }
+  .summer-essentials {
+    left: 20px;
+    top: 100px;
+  }
+  .flash-sales2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-1 {
+    min-width: 100%;
+  }
+  .trading-must-haves {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-2 {
+    min-width: 100%;
+  }
+  .frm-top-1002 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-32 {
+    min-width: 100%;
+  }
+  .card-4 {
+    flex-direction: column;
+  }
+  .luminae-subscription {
+    width: 100%;
+    padding: 32px 20px 32px 20px;
+  }
+  .text-box-email {
+    width: 100%;
+  }
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-1 {
+    padding: 28px 40px 28px 40px;
+  }
+  .header-gray {
+    padding: 8px 40px 8px 40px;
+  }
+  .frm-flash-sale {
+    padding: 0px 40px 0px 40px;
+  }
+  .fem-trending {
+    padding: 0px 40px 0px 40px;
+  }
+  .frm-top-100 {
+    padding: 0px 40px 0px 40px;
+  }
+  .frm-card-34 {
+    padding: 0px 40px 0px 40px;
+  }
+  .card-5 {
+    padding: 0px 40px 0px 40px;
+  }
+  .footer2 {
+    padding: 132px 40px 60px 40px;
+  }
+  .frm-top-left {
+    width: 400px;
+  }
+  .button-top-right {
+    padding: 32px;
+  }
+  .flash-sales2 {
+    gap: 15px;
+  }
+  .trading-must-haves {
+    gap: 15px;
+  }
+  .frm-top-1002 {
+    gap: 15px;
+  }
+  .luminae-subscription {
+    width: 80%;
+  }
+}
+
+/* Desktop Styles (> 1024px) */
+@media (min-width: 1025px) {
+  /* Keep original styles */
+}
