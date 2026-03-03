@@ -1,54 +1,76 @@
-// System Variables
-const systemVars = {
-    countdownDuration: 24 * 60 * 60, // 24 hours in seconds
-    flashSales: ["Flash Sale Item 1", "Flash Sale Item 2", "Flash Sale Item 3"],
-    trendingMustHaves: ["Trending Item 1", "Trending Item 2", "Trending Item 3"],
-    top100: ["Top 100 Item 1", "Top 100 Item 2", "Top 100 Item 3"],
-    newArrivals: ["New Arrival 1", "New Arrival 2", "New Arrival 3"]
-};
 
-// Countdown Timer
-let countdown = systemVars.countdownDuration;
+ const cardsData = [
+    {
+      brand: "Tonny Black",
+      title: "Shoulder bag-White-Plain",
+      image: "assets/img/photo-bag0.png",
+      priceNew: "$69.99",
+      priceOld: "$129.99",
+      discount: "- 40%",
+      rating: 4,
+      quantity: 54,
+      time: ["12", "43", "12"]
+    },
+    {
+      brand: "Reebok",
+      title: "Women’s Powder sneakers",
+      image: "assets/img/photo-bag1.png",
+      priceNew: "$112.02",
+      priceOld: "$129.99",
+      discount: "- 40%",
+      rating: 4,
+      quantity: 54,
+      time: ["02", "05", "32"]
+    }
+  ];
 
-const hourElem = document.querySelector(".hour");
-const minElem = document.querySelector(".min");
-const secElem = document.querySelector(".sec");
+  const container = document.getElementById("cardsContainer");
 
-function updateCountdown() {
-    let hours = Math.floor(countdown / 3600);
-    let minutes = Math.floor((countdown % 3600) / 60);
-    let seconds = countdown % 60;
+  cardsData.forEach(card => {
+    container.innerHTML += `
+      <div class="card-1">
+        <div class="card-top">
+          <div class="card-top3">
+            <div class="deal-of-the-day">Deal of the Day</div>
+            <div class="date">
+              <div class="date2">
+                <div>${card.time[0]}</div>
+                <span>:</span>
+                <div>${card.time[1]}</div>
+                <span>:</span>
+                <div>${card.time[2]}</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    if (hourElem) hourElem.textContent = hours.toString().padStart(2, "0");
-    if (minElem) minElem.textContent = minutes.toString().padStart(2, "0");
-    if (secElem) secElem.textContent = seconds.toString().padStart(2, "0");
+        <div class="frm-photo-mid">
+          <img class="photo-bag" src="${card.image}">
+        </div>
 
-    if (countdown > 0) countdown--;
-}
+        <div class="card-down">
+          <div class="tonny-black">${card.brand}</div>
+          <div class="brown-hiking-backpac">${card.title}</div>
 
-updateCountdown(); // Initial call
-setInterval(updateCountdown, 1000);
+          <div class="card-down-2">
+            <div class="stars">
+              ${"★".repeat(card.rating)}
+            </div>
+            <div class="quantity">(${card.quantity})</div>
+          </div>
 
-// Dropdown Functionality
-document.addEventListener("DOMContentLoaded", function() {
-    const dropdowns = document.querySelectorAll(".dropdown");
+          <div class="card-down-3">
+            <div class="_69-99">${card.priceNew}</div>
+            <div class="_129-99">${card.priceOld}</div>
+            <div class="card-down-4">
+              <div class="_40">${card.discount}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
 
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector(".dropbtn");
-        const dropdownContent = dropdown.querySelector(".dropdown-content");
-
-        if (dropbtn && dropdownContent) {
-            dropbtn.addEventListener("click", function(e) {
-                e.preventDefault();
-                dropdownContent.classList.toggle("show");
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener("click", function(e) {
-                if (!dropdown.contains(e.target)) {
-                    dropdownContent.classList.remove("show");
-                }
-            });
-        }
-    });
-});
+  priceNew: "$59.99"
+brand: "Nike"
+image: "assets/img/new.png"

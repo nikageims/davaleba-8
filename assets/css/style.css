@@ -443,15 +443,10 @@ menu, ol, ul {
   overflow: visible;
 }
 .line-2 {
-  margin-top: -0.5px;
-  border-style: solid;
-  border-color: var(--color-gray-gray-500, #7b7b7b);
-  border-width: 0.5px 0 0 0;
-  flex: 1;
-  height: 0px;
-  position: relative;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
+  width: 1px;
+  background-color: #7b7b7b;
+  align-self: stretch;
+  flex-shrink: 0;
 }
 .header-black-men-cosmetic-advert {
   display: flex;
@@ -506,15 +501,10 @@ menu, ol, ul {
   justify-content: flex-start;
 }
 .line-3 {
-  margin-top: -0.5px;
-  border-style: solid;
-  border-color: var(--color-gray-gray-500, #7b7b7b);
-  border-width: 0.5px 0 0 0;
-  flex: 1;
-  height: 0px;
-  position: relative;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
+  width: 1px;
+  background-color: #7b7b7b;
+  align-self: stretch;
+  flex-shrink: 0;
 }
 .header-black-sign-in-favorites-card {
   display: flex;
@@ -960,55 +950,30 @@ menu, ol, ul {
   flex: 1;
   position: relative;
 }
+
 .kimonos-caftans-pareos {
-  color: var(--text-color-light-text-white-color, #ffffff);
-  text-align: center;
-  font-family: var(--32-boldupper-case-font-family, "Lato-Bold", sans-serif);
-  font-size: var(--32-boldupper-case-font-size, 32px);
-  line-height: var(--32-boldupper-case-line-height, 50px);
-  font-weight: var(--32-boldupper-case-font-weight, 700);
-  text-transform: uppercase;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 26px;
+  line-height: 1.25;
+  text-align: center; 
 }
+
 .kimonos-caftans-pareos2 {
   align-self: stretch;
   flex-shrink: 0;
   height: 50px;
   position: static;
 }
+
 .poolside-glam-included-from-4-99 {
-  color: var(--text-color-light-text-white-color, #ffffff);
+  font-size: 16px;
+  max-width: 420px;
   text-align: center;
-  font-family: var(--28medium-font-family, "Lato-Medium", sans-serif);
-  font-size: var(--28medium-font-size, 28px);
-  line-height: var(--28medium-line-height, 50px);
-  font-weight: var(--28medium-font-weight, 500);
-  position: absolute;
-  left: 0px;
-  top: 202px;
-  width: 893px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 .button {
-  background: var(--button-default, #4172dc);
-  border-radius: var(--spacing-1, 4px);
-  padding: 16px 32px 16px 32px;
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-2, 8px);
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 243px;
-  height: 56px;
-  position: relative;
+  margin-top: 16px;
 }
+
 .icon {
   flex-shrink: 0;
   width: 24px;
@@ -1016,6 +981,36 @@ menu, ol, ul {
   position: relative;
   overflow: visible;
 }
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 420px;  
+  position: relative;
+}
+
+.hero-left {
+  flex: 4; 
+}
+
+.hero-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-right {
+  flex: 6; 
+  background: #4a74dc;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  gap: 14px;
+}
+
 .shop-now {
   color: var(--text-color-inside-inside, #ffffff);
   text-align: right;
@@ -1029,29 +1024,33 @@ menu, ol, ul {
   align-items: center;
   justify-content: flex-end;
 }
+
 .summer-essentials {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  width: max-content;  
+  height: auto;          
+}
+
+
+.frm-top {
+  background: #fff;
+  padding: 36px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-  width: 228px;
-  height: 163px;
-  position: absolute;
-  left: 433px;
-  top: 149px;
+  justify-content: center;
+  flex: none;     
+  align-self: auto; 
+  width: auto;
+    margin-top: 210px;
 }
-.frm-top {
-  background: var(--background-color-white, #ffffff);
-  padding: 36px 30px 36px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-}
+
+
 .frm-text {
   display: flex;
   flex-direction: column;
@@ -1060,7 +1059,10 @@ menu, ol, ul {
   align-self: stretch;
   flex: 1;
   position: relative;
+  flex: none;          
+  align-self: auto;
 }
+
 .summer-essentials2 {
   color: var(--text-color-light-primary-text, #262626);
   text-align: right;
@@ -1135,10 +1137,8 @@ menu, ol, ul {
   position: relative;
 }
 .text-flash-sales {
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 20px;
-  position: static;
+  display: flex;
+  justify-content: space-between;
 }
 .flash-sales {
   color: #000000;
@@ -1163,7 +1163,7 @@ menu, ol, ul {
   justify-content: flex-start;
   width: 58px;
   position: absolute;
-  left: 1292px;
+  left: 1750px;
   top: 0px;
 }
 .view-all2 {
@@ -1174,7 +1174,7 @@ menu, ol, ul {
   line-height: var(--12-regular-line-height, 20px);
   font-weight: var(--12-regular-font-weight, 400);
   position: relative;
-  display: flex;
+  display: flex;  align-items: center;
   align-items: center;
   justify-content: flex-end;
 }
